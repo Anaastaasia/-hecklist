@@ -1,0 +1,140 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*Основные стили*/
+
+:root {
+    --progress: 0; 
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checklist {
+    display: flex;
+    align-items: center;
+    width: 743px;
+    height: 91px;
+    background: #3579F5;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.progress_container {
+    position: relative;
+    height: 100%;
+    width: 104px;
+}
+
+.progress_circle {
+    width: 100%;
+    height: 91px;
+    transform: rotate(-90deg);
+}
+
+.progress_circle__ring {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.5);
+    stroke-width: 1;
+}
+
+.progress_circle__fill {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: calc(2 * 3.14159 * 32);
+    stroke-dashoffset: calc(2 * 3.14159 * 32 * (1 - (min(var(--progress), 100) / 100)));
+    transition: stroke-dashoffset 0.3s ease-out;
+}
+
+.progress_circle__text {
+    position: absolute;
+    top: 31px;
+    left: 36px;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: -2px 68px 0px -6px;
+}
+
+.text_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 13px;
+    width: 76px;
+    height: 18px;
+    background: #2364DB;
+    border-radius: 40px;
+}
+
+.text_bold {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.button_checklist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    width: 170px;
+    height: 40px;
+    background: #F4F8FF;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4777ED;
+    cursor: pointer;
+}
